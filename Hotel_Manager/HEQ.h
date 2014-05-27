@@ -1,4 +1,5 @@
-
+#ifndef HEQ_H
+#define  HEQ_H
 #include "Guest.h"
 class Hotel;
 
@@ -15,3 +16,4 @@ protected:
 	HEQ(const HEQ & other);
 	HEQ operator=(const HEQ & other);
 };
+#endif

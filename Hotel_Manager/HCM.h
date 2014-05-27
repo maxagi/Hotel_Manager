@@ -1,5 +1,8 @@
+#ifndef HCM_H
+#define  HCM_H
 
-#include "Guest.h";
+
+#include "Guest.h"
 class Hotel;
 
 //Hotel Club Member Guest
@@ -15,3 +18,5 @@ protected:
 	HCM(const HCM & other);
 	HCM operator=(const HCM & other);
 };
+
+#endif

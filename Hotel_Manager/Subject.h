@@ -1,6 +1,9 @@
 #include <list>
 #include "Observer.h"
 
+#ifndef SUBJECT_H
+#define  SUBJECT_H
+
 class Subject{
 
 public:
@@ -30,3 +33,5 @@ private:
 
 	std::list<ObserverRecord *> mObserevers;
 };
+
+#endif

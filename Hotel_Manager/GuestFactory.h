@@ -1,3 +1,6 @@
+#ifndef GUEST_FACTORY_H
+#define  GUEST_FACTORY_H
+
 #include <string>
 #include <list>
 #include "Guest.h"
@@ -20,3 +23,4 @@ private:
 	GuestFactory& operator=(const GuestFactory&);
 
 };
+#endif

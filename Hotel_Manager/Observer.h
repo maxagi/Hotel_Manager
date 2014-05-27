@@ -1,3 +1,6 @@
+#ifndef  OBSERVER_H
+#define  OBSERVER_H
+
 
 class Subject;
 
@@ -10,3 +13,5 @@ protected:
 	Observer() {}
 	Subject* sbj;
 };
+
+#endif 

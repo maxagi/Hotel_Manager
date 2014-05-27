@@ -1,3 +1,6 @@
+#ifndef  GUEST_H
+#define  GUEST_H
+
 #include "Observer.h"
 #include <string>
 
@@ -13,3 +16,4 @@ public:
 private:
 	std::string name;
 };
+#endif
