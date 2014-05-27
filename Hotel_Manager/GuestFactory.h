@@ -1,6 +1,8 @@
 #include <string>
 #include <list>
 #include "Guest.h"
+#include "HCM.h"
+#include "HEQ.h"
 
 class GuestFactory{
 

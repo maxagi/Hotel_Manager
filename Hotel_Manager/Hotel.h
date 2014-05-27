@@ -27,5 +27,5 @@ private:
 
 	Hotel(){}
 	Hotel(const Hotel&);
-	void operator=(Hotel&);
+	Hotel& operator=(Hotel&);
 };

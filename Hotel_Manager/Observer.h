@@ -1,5 +1,6 @@
 
 class Subject;
+
 class Observer{
 public:
 	virtual ~Observer();

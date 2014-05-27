@@ -16,6 +16,8 @@ public:
 
 protected:
 	Subject();
+	Subject(const Subject &);
+	Subject operator=(const Subject&);
 
 private:
 

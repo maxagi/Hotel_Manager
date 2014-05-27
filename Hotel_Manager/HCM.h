@@ -7,8 +7,11 @@ class HCM : public Guest{
 	friend class GuestFactory;
 
 public:
+	virtual ~HCM(){}
 	virtual void update(Subject * s);
 
-private:
-	HCM(Hotel* hotel);
+protected:
+	HCM(Hotel * const hotel, const std::string & name);
+	HCM(const HCM & other);
+	HCM operator=(const HCM & other);
 };
