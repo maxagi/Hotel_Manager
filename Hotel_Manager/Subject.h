@@ -1,6 +1,5 @@
 #include <list>
-
-class Observer;
+#include "Observer.h"
 
 class Subject{
 
@@ -25,6 +24,9 @@ private:
 		Observer * o;
 		int eventType;
 	};
+	typedef std::list<ObserverRecord*>::const_iterator obs_rec_citer;
+	typedef std::list<ObserverRecord*>::iterator obs_rec_iter;
+
 
 	std::list<ObserverRecord *> mObserevers;
 };
