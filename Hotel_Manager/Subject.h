@@ -14,16 +14,16 @@ public:
 	virtual void notify_all();								//notify all observers
 
 protected:
-	Subject();
+	Subject(){}
 	Subject(const Subject &);
 	Subject operator=(const Subject&);
 
 private:
-
 	struct ObserverRecord{
 		Observer * o;
 		int eventType;
 	};
+
 	typedef std::list<ObserverRecord*>::const_iterator obs_rec_citer;
 	typedef std::list<ObserverRecord*>::iterator obs_rec_iter;
 
