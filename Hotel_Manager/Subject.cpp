@@ -4,7 +4,7 @@ using namespace  std;
 
 void Subject::attach(Observer* obs, const int eventType)
 {
-	ObserverRecord * rec;
+	ObserverRecord * rec = new ObserverRecord;
 	rec->eventType = eventType;
 	rec->o = obs;
 	mObserevers.push_back(rec);
@@ -14,7 +14,6 @@ void Subject::attach(Observer* obs, const int eventType)
 
 void Subject::notify(const int eventType)
 {
-
 	for (obs_rec_citer obs_recs = mObserevers.cbegin(); obs_recs != mObserevers.cend(); ++obs_recs)
 	{
 		if ((*obs_recs)->eventType==eventType)
