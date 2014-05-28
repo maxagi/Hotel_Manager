@@ -11,7 +11,11 @@ class HEQ : public Guest{
 
 public:
 	virtual ~HEQ(){}
-	virtual void update(Subject * s){ std::cout << "HEQ updated : " <<Guest::getName()<<  std::endl; }
+	virtual void update(Subject * s)
+	{
+		if (s == sbj)
+			std::cout << "HEQ updated : " << Guest::getName() << std::endl;
+	}
 
 protected:
 	HEQ(const std::string & name) :Guest(name){}

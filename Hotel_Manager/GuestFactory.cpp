@@ -7,7 +7,7 @@ list<Guest*> GuestFactory::mGuests;
 
 Guest*	GuestFactory::create(const int & guestType, const std::string & name){	//create a guest
 	Guest* g=NULL;
-	if (guestType == HCM_TYPE)
+	if (guestType == Hotel::HCM)
 		g = new HCM(name);
 	else
 		g = new HEQ(name);

@@ -1,6 +1,7 @@
 #ifndef HOTEL_H
 #define HOTEL_H
 
+
 #include "Subject.h"
 #include <list>
 #include <string>
@@ -11,6 +12,8 @@
 class Hotel : public Subject{
 
 public:
+	~Hotel();
+
 	enum GuestType{ HCM, HEQ };
 
 	static Hotel&	getInstance() { return instance; }

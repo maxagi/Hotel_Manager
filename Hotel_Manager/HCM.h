@@ -11,7 +11,11 @@ class HCM : public Guest{
 
 public:
 	virtual ~HCM(){}
-	virtual void update(Subject * s){ std::cout << "HCM updated : " <<  Guest::getName() <<std::endl; }
+	virtual void update(Subject * s)
+	{ 
+		if (s==sbj) 
+			std::cout << "HCM updated : " <<  Guest::getName() <<std::endl;
+	}
 
 protected:
 	HCM(const std::string & name) :Guest(name){}
