@@ -8,7 +8,7 @@
 class Guest : public Observer{
 public:
 	~Guest(){}
-	Guest(const std::string &name);
+	Guest(const std::string &name) :name(name){}
 
 	virtual void update(Subject * s) = 0;
 	std::string getName() { return name; }
