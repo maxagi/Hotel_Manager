@@ -5,6 +5,14 @@ using namespace std;
 int main(){
 
 
+	Hotel& hotel = Hotel::getInstance();
+
+	hotel.addGuest(Hotel::HEQ, "max");
+	hotel.addGuest(Hotel::HEQ, "hussam");
+	hotel.addGuest(Hotel::HCM, "Yossi Halachmi");
+
+
+
 	unsigned int c, c1;
 	bool cont = true;
 

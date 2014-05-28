@@ -3,6 +3,7 @@
 
 #include "Guest.h"
 #include "Hotel.h"
+#include <iostream>
 
 //Hotel Regular Guest
 class HEQ : public Guest{
@@ -10,7 +11,7 @@ class HEQ : public Guest{
 
 public:
 	virtual ~HEQ(){}
-	virtual void update(Subject * s){}
+	virtual void update(Subject * s){ std::cout << "HEQ updated : " <<Guest::getName()<<  std::endl; }
 
 protected:
 	HEQ(const std::string & name) :Guest(name){}

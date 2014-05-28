@@ -3,6 +3,7 @@
 
 #include "Guest.h"
 #include "Hotel.h"
+#include <iostream>
 
 //Hotel Club Member Guest
 class HCM : public Guest{
@@ -10,7 +11,7 @@ class HCM : public Guest{
 
 public:
 	virtual ~HCM(){}
-	virtual void update(Subject * s){}
+	virtual void update(Subject * s){ std::cout << "HCM updated : " <<  Guest::getName() <<std::endl; }
 
 protected:
 	HCM(const std::string & name) :Guest(name){}

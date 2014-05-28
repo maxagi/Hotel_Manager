@@ -7,21 +7,19 @@
 #include "Guest.h"
 
 
-#define HCM_TYPE 1
-#define HEQ_TYPE 2
-
-
 //singleton class
 class Hotel : public Subject{
 
 public:
+	enum GuestType{ HCM, HEQ };
+
 	static Hotel&	getInstance() { return instance; }
 
 	void			addGuest(const int & guestType, const std::string & name);
 	void			removeGuest(Guest* guest);
 
 	void			changeRoomPrice(const float NewPrice);		//change room price and notify ALL guests
-	void			upgradeMembership() { notify(HCM_TYPE); }	//notify only HCMs
+	void			upgradeMembership() { notify(HCM); }		//notify only HCMs
 
 
 protected:
