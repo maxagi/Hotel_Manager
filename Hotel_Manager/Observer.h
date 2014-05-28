@@ -6,7 +6,7 @@ class Subject;
 
 class Observer{
 public:
-	virtual ~Observer(){}
+	virtual ~Observer(){ delete sbj; }
 	virtual void	update(Subject * s) = 0;
 
 	void			setSbj(Subject*const  s) { sbj = s; }
