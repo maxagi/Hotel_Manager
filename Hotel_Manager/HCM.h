@@ -12,8 +12,8 @@ public:
 	virtual ~HCM(){}
 	virtual void update(Subject * s)
 	{
-
-		std::cout << "HCM updated : " << name << std::endl;
+		if (s == sbj)
+			std::cout << "HCM updated : " << name << std::endl;
 	}
 
 protected:

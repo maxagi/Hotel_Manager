@@ -12,7 +12,8 @@ public:
 	virtual ~HEQ(){}
 	virtual void update(Subject * s)
 	{
-		std::cout << "HEQ updated : " << name << std::endl;
+		if (s == sbj)
+			std::cout << "HEQ updated : " << name << std::endl;
 	}
 
 protected:
