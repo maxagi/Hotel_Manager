@@ -1,11 +1,11 @@
 #include "hotel.h"
-#include "GuestFactory.h"
+
 
 Hotel Hotel::instance;
 
-void Hotel::addGuest(const int & guestType, const std::string & name)
+void Hotel::addGuest(const int  guestType, const std::string & name)
 {
-	Guest* guest = GuestFactory::create(guestType,name);
+	Guest* guest = new Guest(name, guestType);
 	mGuests.push_back(guest);
 	attach(guest, guestType);
 	guest->setSbj(this);
@@ -20,6 +20,10 @@ void Hotel::changeRoomPrice(const float NewPrice){
 	notify_all();
 }
 
-Hotel::~Hotel(){
-	GuestFactory::destroy_all();
+Hotel::~Hotel()
+{
+	for (std::list<Guest*>::const_iterator iter = mGuests.cbegin(); iter != mGuests.cend(); ++iter)
+	{
+		delete *iter;
+	}
 }

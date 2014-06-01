@@ -14,15 +14,13 @@ class Hotel : public Subject{
 public:
 	~Hotel();
 
-	enum GuestType{ HCM, HEQ };
-
 	static Hotel&	getInstance() { return instance; }
 
-	void			addGuest(const int & guestType, const std::string & name);
+	void			addGuest(const int  guestType, const std::string & name);
 	void			removeGuest(Guest* guest);
 
 	void			changeRoomPrice(const float NewPrice);		//change room price and notify ALL guests
-	void			upgradeMembership() { notify(HCM); }		//notify only HCMs
+	void			upgradeMembership() { notify(Guest::HCM); }		//notify only HCMs
 
 
 protected:
