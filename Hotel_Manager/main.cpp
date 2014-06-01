@@ -1,9 +1,11 @@
 #include "Hotel.h"
 #include<iostream>
-#include <vld.h>
+//#include <vld.h>
 using namespace std;
 
 int main(){
+
+
 
 	unsigned int c, c1;
 	bool cont = true;
@@ -29,13 +31,13 @@ int main(){
 			hotel.notify_all();
 			break;
 		case 1:
-			hotel.notify(Hotel::HCM);
+			hotel.notify(Guest::HCM);
 			break;
 		case 2:
 			cin.sync();
 			cout << "please enter the HCM guest name" << endl;
 			getline(cin, str);
-			hotel.addGuest(Hotel::HCM, str);
+			hotel.addGuest(Guest::HCM, str);
 
 			break;
 
@@ -43,7 +45,7 @@ int main(){
 			cin.sync();
 			cout << "please enter the HEQ guest name" << endl;
 			getline(cin, str);
-			hotel.addGuest(Hotel::HEQ, str);
+			hotel.addGuest(Guest::HEQ, str);
 			break;
 
 		default:
