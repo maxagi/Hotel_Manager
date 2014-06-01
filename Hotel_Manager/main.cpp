@@ -1,6 +1,6 @@
 #include "Hotel.h"
 #include<iostream>
-//#include <vld.h>
+#include <vld.h>
 using namespace std;
 
 int main(){

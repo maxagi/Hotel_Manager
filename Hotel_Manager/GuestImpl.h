@@ -4,7 +4,7 @@
 #include "Observer.h"
 #include <string>
 
-class GuestImpl{
+class GuestImpl:public Observer{
 public:
 	virtual ~GuestImpl(){}
 

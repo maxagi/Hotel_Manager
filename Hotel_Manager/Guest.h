@@ -2,12 +2,11 @@
 #define  GUEST_H
 
 #include <iostream>
-#include "Observer.h"
 #include "GuestImpl.h"
 #include <string> 
 
 //base class that represents a Hotel guest
-class Guest :public Observer{
+class Guest{
 public:
 	~Guest(){ delete g_impl; }
 	Guest(const std::string &name, const int  guestType) :g_impl(GuestImpl::Factory(name,guestType)){}

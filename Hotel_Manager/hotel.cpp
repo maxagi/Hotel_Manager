@@ -7,8 +7,8 @@ void Hotel::addGuest(const int  guestType, const std::string & name)
 {
 	Guest* guest = new Guest(name, guestType);
 	mGuests.push_back(guest);
-	attach(guest, guestType);
-	guest->setSbj(this);
+	attach(guest->Impl(), guestType);
+	(guest->Impl())->setSbj(this);
 }
 
 void Hotel::removeGuest(Guest* guest){
